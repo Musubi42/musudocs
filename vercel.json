@@ -11,7 +11,12 @@
       ]
     }
   ],
-
+  "builds": [
+    {
+      "src": "docs/",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
