@@ -13,14 +13,14 @@
   ],
   "builds": [
     {
-      "src": "docs/.vitepress/**",
+      "src": "docs/.vitepress/dist/**",
       "use": "@vercel/static"
     }
   ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/docs/$1"
+      "destination": "docs/.vitepress/dist/$1"
     }
   ],
   "buildCommand": "pnpm docs:build",
