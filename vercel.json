@@ -13,11 +13,8 @@
   ],
   "builds": [
     {
-      "src": "**",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "docs/.vitepress/dist"
-      }
+      "src": "docs/.vitepress/dist/**/*.html",
+      "use": "@vercel/static"
     }
   ],
   "rewrites": [
