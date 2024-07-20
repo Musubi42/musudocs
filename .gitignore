@@ -6,3 +6,5 @@ docs/.vitepress/cache/
 .env
 
 curl strapi
+
+.cache_ggshield
