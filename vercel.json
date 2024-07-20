@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -9,5 +10,23 @@
         }
       ]
     }
-  ]
+  ],
+  "builds": [
+    {
+      "src": "docs/**",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "docs/.vitepress/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/docs/$1"
+    }
+  ],
+  "buildCommand": "pnpm docs:build",
+  "installCommand": "pnpm install",
+  "framework": "vitepress"
 }
