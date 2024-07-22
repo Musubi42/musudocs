@@ -11,12 +11,6 @@
       ]
     }
   ],
-  "builds": [
-    {
-      "src": "docs/*.md",
-      "use": "@vercel/static"
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
