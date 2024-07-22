@@ -11,12 +11,7 @@
       ]
     }
   ],
-  "builds": [
-    {
-      "src": "docs/.vitepress/dist/*.html",
-      "use": "@vercel/static"
-    }
-  ],
+
   "rewrites": [
     {
       "source": "/(.*)",
