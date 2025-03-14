@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "docs/.vitepress/dist/$1"
+    }
+  ],
+  "buildCommand": "pnpm docs:build",
+  "outputDirectory": "docs/.vitepress/dist",
+  "installCommand": "pnpm install",
+  "framework": "vitepress"
+}
